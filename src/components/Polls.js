@@ -26,7 +26,7 @@ export default class Polls extends React.Component {
 
             return (
                 <div className='flex-hori' style={{'maxWidth':'800px','margin':'auto','padding':'10px'}} key={poll._id}>
-                    <Link to={'/poll/' + poll._id} style={{'flex':1,textDecoration:'none',textAlign:'left','border':'1px solid lime','borderRadius':'10px','padding':'5px'}}><h3 style={{'flex':1}}>{poll.title}</h3></Link>{face}{check}<h4>Votes:{poll.totalVotes}</h4>
+                    <Link to={'/poll/' + poll._id} style={{'flex':1,textDecoration:'none',textAlign:'left','border':'1px solid lime','borderRadius':'10px','padding':'5px'}}><h3 style={{'flex':1}}>{poll.title}</h3></Link>{face}{check}<h4>{'Votes: '}{poll.totalVotes}</h4>
                 </div>
             );
         });
