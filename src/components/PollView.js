@@ -88,7 +88,10 @@ export default class PollView extends React.Component {
                 <div>
                     <h3>{this.state.poll.title}</h3>
                     <h4>You have voted</h4>
-                    <Doughnut data={data} />
+                    <div style={{'height':'400px','margin':'auto'}}>
+                        <Doughnut data={data} 
+                        options={{maintainAspectRatio: false, responsive: true}} />
+                    </div>
                     <br/>
                 </div>
             );
