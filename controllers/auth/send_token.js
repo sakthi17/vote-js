@@ -2,7 +2,7 @@ var jwt = require('jwt-simple');
 
 module.exports = function (user, res) {
 
-    var minutes = 15;
+    var minutes = 60 * 2;
 
     var d = new Date();
     //current time in milliseconds from epoch
