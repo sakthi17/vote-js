@@ -18,8 +18,6 @@ module.exports = function(req, res) {
 
         console.log('User created!');
 
-        console.log(newUser);
-
         sendToken(newUser, res);
 
         res.json({
