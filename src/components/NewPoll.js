@@ -99,7 +99,7 @@ export default class NewPoll extends React.Component {
         cats = this.state.categories.map(function(cat, i) {
             return (
             <div key={i} style={{'width':'100%'}} className='flex-hori'>
-                <input type='text' value={_this.state.categories[i]} onChange={_this.handleChange.bind(_this, i)} style={{'flex':1,'height':'20px'}} placeholder={'category'}/><button onClick={_this.deleteCategory.bind(_this, i)}>X</button>
+                <input type='text' value={_this.state.categories[i]} onChange={_this.handleChange.bind(_this, i)} style={{'flex':1,'height':'20px'}} placeholder={'category'}/><button type='button' onClick={_this.deleteCategory.bind(_this, i)}>X</button>
             </div>
             );
         })
