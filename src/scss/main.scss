@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+
+.flex-vert {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-hori {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.not-logged-in {
+    color: blue;
+}
+
+html {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.App {
+    max-width: 1000px;
+    margin: auto;
+    flex-direction: row;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    background-color: white;
+}
+
+.form-container {
+    height: auto;
+    flex: 1;
+    border: 5px solid black;
+    border-radius: 50px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    input button {
+        padding: 5px;
+        flex: 1;
+        width: auto;
+        margin: 5px auto;
+    }
+}
+
+#new-poll-box {
+    width: 120px;
+    padding: 0 15px;
+    margin: 20px auto;
+    border: 3px solid hotpink;
+    border-radius: 50px;
+    &:hover {
+        background-color: black;
+        border-color: hotpink;
+    }
+}
+
+#new-poll-link-box {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 5px solid black;
+}
+
+#footer {
+    width: auto;
+    padding: 20px;
+    align-self: flex-bottom;
+    height: auto;
+    background-color: black;
+    .github-img-link {
+        flex: 1;
+        align-self: center;
+        background-color: lime;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        &:hover {
+            background-color: hotpink;
+        }
+        img {
+            margin: auto;
+            align-self: center;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}
+
+#header {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    align-self: flex-top;
+    height: auto;
+    background-color: black;
+
+    flex-wrap: wrap;
+}
+
+#home {
+    flex: 1;
+    align-self: center;
+}
+
+#title {
+    order: -1;
+    width: 100%;
+    color: lime;
+    font-size: 50px;
+    height: 0;
+}
+
+#user {
+    flex: 1;
+    align-self: center;
+}
+
+//screens that are at least 780 pixels wide will use this styling
+@media (min-width: 780px) {
+    #header {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: auto;
+        align-self: flex-top;
+        height: 150px;
+        background-color: black;
+    }
+    #home {
+        order: 0;
+        flex: 1;
+    }
+    #title {
+        order: 0;
+        flex: 3;
+        font-size: 60px;
+        height: 60px;
+    }
+    #user {
+        order: 0;
+        flex: 1;
+    }
+}
+
+button {
+    padding: 5px;
+    
+    &.primary {
+        background-color: lime;
+    }
+
+    &.delete-poll {
+        background-color: red;
+        color: white;
+        font-style: bold;
+    }
+
+    &.delete-account {
+        background-color: red;
+        color: white;
+        font-style: bold;
+        padding: 20px;
+    }
+
+    &.category-button {
+        margin: 10px;
+    }
+}
